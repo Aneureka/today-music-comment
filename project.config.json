@@ -1,0 +1,16 @@
+{
+	"miniprogramRoot": "dist/",
+	"cloudfunctionRoot": "cloud/functions/",
+	"projectname": "today-music-comment",
+	"description": "Today comments from Netease Music.",
+	"appid": "wx776a9f3f8abd0e39",
+	"setting": {
+		"urlCheck": true,
+		"es6": false,
+		"postcss": false,
+		"minified": false,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"condition": {}
+}
