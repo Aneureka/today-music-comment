@@ -4,7 +4,7 @@
 
 全称 *今日云音乐热门评论* ，是一个微信小程序，愿你在每次下拉刷新都能收获新的心情。
 
-<img src="https://i.loli.net/2019/05/07/5cd12724e25b1.png" alt="1557035460091.png" title="1557035460091.png" width="250px"/>
+<img src="https://i.loli.net/2019/05/07/5cd12ed52cec3.png" alt="screenshot.png" title="screenshot.png"  width="600px"/>
 
 
 
