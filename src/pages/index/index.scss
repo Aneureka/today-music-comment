@@ -1,0 +1,77 @@
+.index {
+  max-height: 100%;
+}
+
+$w: 80vw;
+$pw: 10vw;
+
+.bg {
+  background-image: url('https://p2.music.126.net/MXzI7ExXb6ru3CeW_P1HSw==/7906588115831440.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 150%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  filter: blur(10px) brightness(30%);
+  z-index: -1;
+  transform: scale(1.1);
+}
+
+.main {
+  height: 100%;
+  padding-left: $pw;
+  padding-right: $pw;
+  padding-top: $pw;
+  display: block;
+  //justify-content: space-between;
+  color: white;
+  overflow: hidden;
+}
+
+.image-wrapper {
+  display: block;
+  width: $w;
+  height: $w;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  padding: 15px;
+  background-color: white;
+}
+
+.song-image {
+  width: 100%;
+  height: 100%;
+}
+
+.song-title {
+
+}
+
+.content {
+  margin-top: 2/3 * $pw;
+  margin-bottom: 2/3 * $pw;
+  text-align: left;
+  overflow: auto;
+  line-height: 1.5;
+}
+
+.info {
+  text-align: right;
+  font-size: 30px;
+  margin-bottom: 2/3 * $pw;
+}
+
+.author {
+}
+
+.date {
+
+}
+
+.song-title {
+
+}
