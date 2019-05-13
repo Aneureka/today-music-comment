@@ -7,8 +7,24 @@ export default class Index extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      comment: {},
-      songImageLoaded: false
+      comment: {
+        song_id: 0,
+        title: '',
+        images: '',
+        author: '',
+        album: '',
+        description: '',
+        mp3_url: '',
+        pub_date: '',
+        comment_id: 0,
+        comment_user_id: 0,
+        comment_nickname: '',
+        comment_avatar_url: '',
+        commnet_liked_count: 0,
+        comment_content: '',
+        comment_pub_date: ''
+      },
+      nextComment: {},
     }
   }
 
@@ -28,6 +44,7 @@ export default class Index extends Component {
 
   componentWillMount () {
     this.fetchComment()
+
   }
 
   componentDidMount () {
@@ -42,7 +59,7 @@ export default class Index extends Component {
 
   handleSongImageLoad () {
     this.setState({
-      songImageLoaded: true
+      comment: this.state.nextComment
     })
   }
 
@@ -54,10 +71,8 @@ export default class Index extends Component {
       })
       .then(res => {
         // TODO handle exception
-        console.log(res.result.images)
         this.setState({
-          comment: res.result,
-          songImageLoaded: false
+          nextComment: res.result
         })
       })
       .catch(e => {
@@ -67,19 +82,17 @@ export default class Index extends Component {
 
   render () {
     const comment = this.state.comment
-    // const songImageUrl = this.state.songImageUrl
-    const bgStyle = {background: this.state.songImageLoaded ? 'url('+ comment.images + ')' : 'black'}
     return (
       <View className='index' >
-        <View className='bg' style={bgStyle} />
+        <View className='bg' style={{background: 'url('+ comment.images + ')'}} />
         <View className='main'>
           <View className='image-wrapper'>
-            <Image className='song-image' src={comment.images} onLoad={this.handleSongImageLoad.bind(this)} />
+            <Image className='song-image' src={comment.images} />
+            <Image className='preload-image' src={this.state.nextComment.images} onLoad={this.handleSongImageLoad.bind(this)} />
           </View>
           <View className='content'>{comment.comment_content}</View>
           <View className='info'>
             <View className='author'>@{comment.comment_nickname}</View>
-            {/*<View className='date'>{comment.comment_pub_date}</View>*/}
             <View className='song-title'>{'📻 ' + comment.title}</View>
           </View>
         </View>

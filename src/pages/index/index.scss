@@ -26,7 +26,6 @@ $pw: 10vw;
   padding-right: $pw;
   padding-top: $pw;
   display: block;
-  //justify-content: space-between;
   color: white;
   overflow: hidden;
 }
@@ -45,6 +44,10 @@ $pw: 10vw;
 .song-image {
   width: 100%;
   height: 100%;
+}
+
+.preload-image {
+  display: none;
 }
 
 .content {
